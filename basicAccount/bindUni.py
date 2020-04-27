@@ -17,11 +17,11 @@ bind = Blueprint('bind',__name__)
 def _bind():
     try:
         db = pymysql.connect(
-        host="40.89.174.198",
-        port=3900,
-        user="jovel",
+        host="127.0.0.1",
+        port=3306,
+        user="TimeScope",
         password='12321Wjwwjw',
-        database="jovel",
+        database="TimeScope",
         charset="utf8")
         cursor = db.cursor()
 
