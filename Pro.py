@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'TimeScope | Ver 1.7'
+    return 'TimeScope | Ver 2.0'
 
 app.register_blueprint(getTable)
 app.register_blueprint(bind)
