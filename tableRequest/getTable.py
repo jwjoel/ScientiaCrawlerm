@@ -18,23 +18,25 @@ def _getTable():
 
         try:
 
+                        #time = request.args.get("time")
+                        #openid = request.args.get("openid")
+                        
+                        #db = pymysql.connect(
+                        #host="",
+                        #port=,
+                        #user="",
+                        #password='',
+                        #database="",
+                        #charset="")
+                        #cursor = db.cursor()
+
+                        #cursor.execute("SELECT * FROM user WHERE wxUser = '"+openid+"'")
+                        #tempSql = cursor.fetchone()
+                        #username = tempSql[2]
+                        #password = tempSql[3]
+                        username = request.args.get("username")
+                        password = request.args.get("password")
                         time = request.args.get("time")
-                        openid = request.args.get("openid")
-
-                        db = pymysql.connect(
-                        host="40.89.174.198",
-                        port=3900,
-                        user="jovel",
-                        password='12321Wjwwjw',
-                        database="jovel",
-                        charset="utf8")
-                        cursor = db.cursor()
-
-                        cursor.execute("SELECT * FROM user WHERE wxUser = '"+openid+"'")
-                        tempSql = cursor.fetchone()
-                        username = tempSql[2]
-                        password = tempSql[3]
-
         
                         data = {'__LASTFOCUS':'', 
                                 '__VIEWSTATE':'/wEPDwUJLTczNTI4NDAyD2QWAgIED2QWAgIBD2QWDgIBDw8WAh4EVGV4dAUFTG9naW5kZAIDDw8WAh8ABSlQbGVhc2UgcHJvdmlkZSB5b3VyIHVzZXJuYW1lIGFuZCBwYXNzd29yZGRkAgUPDxYCHwAFCVVzZXIgTmFtZWRkAgkPDxYCHwAFCFBhc3N3b3JkZGQCDQ8PFgIfAGVkZAIPDw8WAh8ABQVMb2dpbmRkAhEPDxYCHgdWaXNpYmxlaGRkZBDCVKyf3AlB4U5faD0nkFSvTSj0', 

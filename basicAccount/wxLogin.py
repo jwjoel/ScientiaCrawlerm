@@ -15,6 +15,7 @@ wxLogin = Blueprint('wxLogin',__name__)
 
 @wxLogin.route('/wxLogin')
 def _wxLogin():
+        #This part is use wechat authorization, If you don't need it, just ignore.
         #nickName = request.args.get("nickName")
         openid = request.args.get("openid")
         loginFail = False
@@ -22,11 +23,11 @@ def _wxLogin():
         if(loginFail == False):
                 try:
                         db = pymysql.connect(
-                        host="127.0.0.1",
+                        host="",
                         port=3306,
-                        user="TimeScope",
-                        password='12321Wjwwjw',
-                        database="TimeScope",
+                        user="",
+                        password='',
+                        database="",
                         charset="utf8")
                         cursor = db.cursor()
                         if (str(cursor.execute("SELECT * FROM user WHERE wxUser = '"+openid+"'")) == "0"):

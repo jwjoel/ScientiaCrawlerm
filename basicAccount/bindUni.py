@@ -15,13 +15,14 @@ bind = Blueprint('bind',__name__)
 
 @bind.route('/bind')
 def _bind():
+    #This part is use for storage userdata to database, If you don't need it, just ignore.
     try:
         db = pymysql.connect(
-        host="127.0.0.1",
+        host="",
         port=3306,
-        user="TimeScope",
-        password='12321Wjwwjw',
-        database="TimeScope",
+        user="",
+        password='',
+        database="",
         charset="utf8")
         cursor = db.cursor()
 
